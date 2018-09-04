@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.tracker2.MapActivity" />
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#8FFF"
+        android:padding="3dp"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/avgSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="#8FFF"
+        android:padding="3dp"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/curSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/avgSpeed"
+        android:layout_alignRight="@+id/avgSpeed"
+        android:layout_below="@+id/avgSpeed"
+        android:background="#8FFF"
+        android:padding="3dp"
+        android:text=""
+        android:textColor="#000" />
+
+    <Chronometer
+        android:id="@+id/chronometer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/distance"
+        android:layout_centerHorizontal="true"
+        android:background="#8FFF"
+        android:padding="3dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#8FFF"
+        android:onClick="onStartClick"
+        android:padding="5dp"
+        android:text="Start"
+        android:textColor="#000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:textSize="16sp"
+        android:textColor="#000"
+        android:background="#8FFF"
+        android:padding="5dp"
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:onClick="onLocClick"
+        android:text="my loc" />
+
+</RelativeLayout>
